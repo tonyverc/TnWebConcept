@@ -1,0 +1,74 @@
+---
+const services = [
+  {
+    icon: '⚡',
+    title: 'Développement Frontend',
+    description: 'Création d\'interfaces modernes et réactives avec Angular 18, TypeScript et Tailwind CSS.',
+    technologies: ['Angular 18', 'TypeScript', 'Tailwind CSS', 'RxJS']
+  },
+  {
+    icon: '🔧',
+    title: 'Développement Backend',
+    description: 'APIs robustes et sécurisées avec Symfony 7, architecture RESTful et authentification JWT.',
+    technologies: ['Symfony 7', 'PHP 8', 'MySQL', 'API Platform']
+  },
+  {
+    icon: '🚀',
+    title: 'Full-Stack',
+    description: 'Applications web complètes de A à Z avec architecture moderne et déploiement Docker.',
+    technologies: ['Docker', 'Git', 'CI/CD', 'Linux']
+  },
+  {
+    icon: '🎨',
+    title: 'UI/UX Design',
+    description: 'Interfaces utilisateur intuitives et responsive, optimisées pour tous les appareils.',
+    technologies: ['Figma', 'Design System', 'Responsive', 'Accessibilité']
+  },
+  {
+    icon: '🔐',
+    title: 'Sécurité',
+    description: 'Authentification sécurisée, gestion des rôles, protection des données RGPD.',
+    technologies: ['JWT', 'RBAC', 'HTTPS', 'RGPD']
+  },
+  {
+    icon: '📊',
+    title: 'Base de données',
+    description: 'Conception et optimisation de bases de données relationnelles performantes.',
+    technologies: ['MySQL', 'Doctrine ORM', 'Migrations', 'Optimisation']
+  }
+];
+---
+
+<section id="services" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+        Mes Services
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Une expertise complète pour vos projets web, du concept à la mise en production
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow border border-gray-200">
+          <div class="text-5xl mb-4">{service.icon}</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            {service.title}
+          </h3>
+          <p class="text-gray-600 mb-4">
+            {service.description}
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {service.technologies.map((tech) => (
+              <span class="text-xs px-3 py-1 bg-primary-100 text-primary-700 rounded-full font-medium">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

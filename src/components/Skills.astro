@@ -1,0 +1,97 @@
+---
+const skillCategories = [
+  {
+    category: 'Frontend',
+    color: 'primary',
+    skills: [
+      { name: 'Angular 18', level: 90 },
+      { name: 'TypeScript', level: 85 },
+      { name: 'HTML/CSS', level: 95 },
+      { name: 'Tailwind CSS', level: 90 },
+      { name: 'RxJS', level: 80 }
+    ]
+  },
+  {
+    category: 'Backend',
+    color: 'accent',
+    skills: [
+      { name: 'Symfony 7', level: 85 },
+      { name: 'PHP 8', level: 85 },
+      { name: 'API REST', level: 90 },
+      { name: 'MySQL', level: 80 },
+      { name: 'Doctrine ORM', level: 80 }
+    ]
+  },
+  {
+    category: 'Outils & DevOps',
+    color: 'primary',
+    skills: [
+      { name: 'Docker', level: 75 },
+      { name: 'Git / GitHub', level: 90 },
+      { name: 'Linux', level: 80 },
+      { name: 'VS Code', level: 95 },
+      { name: 'Postman', level: 85 }
+    ]
+  }
+];
+---
+
+<section id="competences" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+        Compétences
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Stack technique moderne et maîtrise des outils du développement web
+      </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+      {skillCategories.map((category) => (
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+            {category.category}
+          </h3>
+          <div class="space-y-4">
+            {category.skills.map((skill) => (
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">{skill.name}</span>
+                  <span class="text-sm text-gray-500">{skill.level}%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    class={`h-2 rounded-full bg-${category.color}-600`}
+                    style={`width: ${skill.level}%`}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 max-w-4xl mx-auto">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl p-8 text-white text-center">
+        <h3 class="text-2xl font-bold mb-4">Certification Professionnelle</h3>
+        <p class="text-lg mb-2">
+          Concepteur Développeur d'Applications (CDA)
+        </p>
+        <p class="text-primary-100">
+          Titre RNCP Niveau 6 (Bac+3/4) - SOFIP
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-primary-600 {
+    background-color: #2563eb;
+  }
+  .bg-accent-600 {
+    background-color: #059669;
+  }
+</style>

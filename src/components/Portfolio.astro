@@ -1,0 +1,108 @@
+---
+const projects = [
+  {
+    title: 'France Marine Services',
+    description: 'Application web complète avec catalogue produits public et interface d\'administration sécurisée.',
+    image: '/images/project-fms.jpg',
+    technologies: ['Angular 18', 'Symfony 7', 'MySQL', 'Docker', 'JWT'],
+    features: [
+      'Catalogue produits avec filtres avancés',
+      'Interface admin avec EasyAdmin',
+      'Authentification JWT',
+      '14 endpoints API RESTful',
+      'Design responsive Tailwind CSS'
+    ],
+    link: '#'
+  },
+  {
+    title: 'Dashboard Analytics',
+    description: 'Tableau de bord temps réel pour visualiser les statistiques et KPIs métier.',
+    image: '/images/project-dashboard.jpg',
+    technologies: ['Angular', 'Chart.js', 'API REST', 'TypeScript'],
+    features: [
+      'Graphiques interactifs',
+      'Filtres et exports de données',
+      'Mise à jour temps réel',
+      'Design moderne et épuré'
+    ],
+    link: '#'
+  },
+  {
+    title: 'Site E-commerce',
+    description: 'Plateforme de vente en ligne avec gestion complète des produits et commandes.',
+    image: '/images/project-ecommerce.jpg',
+    technologies: ['Symfony', 'Stripe', 'MySQL', 'Twig'],
+    features: [
+      'Panier et gestion commandes',
+      'Paiement sécurisé Stripe',
+      'Panel admin complet',
+      'Système de notifications'
+    ],
+    link: '#'
+  }
+];
+---
+
+<section id="portfolio" class="py-16 md:py-24 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+        Portfolio
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Découvrez quelques-unes de mes réalisations récentes
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      {projects.map((project, index) => (
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+            <span class="text-white text-6xl opacity-50">🚀</span>
+          </div>
+          
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">
+              {project.title}
+            </h3>
+            <p class="text-gray-600 mb-4">
+              {project.description}
+            </p>
+
+            <div class="mb-4">
+              <h4 class="font-semibold text-gray-900 mb-2">Fonctionnalités :</h4>
+              <ul class="space-y-1">
+                {project.features.map((feature) => (
+                  <li class="text-sm text-gray-600 flex items-start gap-2">
+                    <svg class="w-4 h-4 text-accent-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              {project.technologies.map((tech) => (
+                <span class="text-xs px-3 py-1 bg-primary-100 text-primary-700 rounded-full font-medium">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <a 
+              href={project.link}
+              class="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+            >
+              Voir le projet
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

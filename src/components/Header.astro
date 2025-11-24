@@ -1,0 +1,82 @@
+---
+const navItems = [
+  { name: "Accueil", href: "#accueil" },
+  { name: "Services", href: "#services" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Compétences", href: "#competences" },
+  { name: "À propos", href: "#apropos" },
+  { name: "Contact", href: "#contact" },
+];
+---
+
+<header class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+  <nav class="container mx-auto px-4 py-4">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logo.svg" alt="TN Web Concept" class="h-14" />
+        </a>
+        <ul class="hidden md:flex space-x-8">
+          {
+            navItems.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden p-2 text-gray-700 hover:text-primary-600"
+          aria-label="Menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4">
+        <ul class="flex flex-col space-y-4">
+          {
+            navItems.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="block text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </nav>
+  </nav>
+
+  <script>
+    const button = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+
+    button?.addEventListener("click", () => {
+      menu?.classList.toggle("hidden");
+    });
+  </script>
+</header>
