@@ -1,43 +1,42 @@
 ---
 const services = [
   {
-    icon: '⚡',
-    title: 'Développement Frontend',
-    description: 'Création d\'interfaces modernes et réactives avec Angular 18, TypeScript et Tailwind CSS.',
-    technologies: ['Angular ', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS', 'JavaScript']
+    icon: '🌐',
+    title: 'Site Vitrine',
+    description: 'Création de sites web modernes et élégants pour présenter votre activité et attirer de nouveaux clients.',
+    features: ['Design sur mesure', 'Responsive', 'SEO optimisé', 'Formulaire de contact']
   },
   {
-    icon: '🔧',
-    title: 'Développement Backend',
-    description: 'APIs robustes et sécurisées avec Symfony 7, architecture RESTful et authentification JWT.',
-    technologies: ['Symfony ', 'PHP ', 'MySQL', 'API Platform']
+    icon: '🛒',
+    title: 'Site E-commerce',
+    description: 'Boutiques en ligne complètes avec gestion des produits, paiements sécurisés et suivi des commandes.',
+    features: ['Catalogue produits', 'Panier', 'Paiement sécurisé', 'Tableau de bord']
   },
   {
-    icon: '🚀',
-    title: 'Full-Stack',
-    description: 'Applications web complètes de A à Z avec architecture moderne et déploiement Docker.',
-    technologies: ['Docker', 'Git', 'CI/CD', 'Linux']
+    icon: '💼',
+    title: 'Application Web',
+    description: 'Applications métier sur mesure pour digitaliser vos processus et améliorer votre productivité.',
+    features: ['Fonctionnalités sur mesure', 'Interface intuitive', 'Sécurisé', 'Évolutif']
   },
   {
     icon: '🎨',
-    title: 'UI/UX Design',
-    description: 'Interfaces utilisateur intuitives et responsive, optimisées pour tous les appareils.',
-    technologies: ['Figma', 'Design System', 'Responsive', 'Accessibilité']
+    title: 'Refonte de Site',
+    description: 'Modernisation de votre site existant avec un design actuel et des performances optimisées.',
+    features: ['Design moderne', 'Amélioration UX', 'Performance', 'Migration de contenu']
   },
   {
-    icon: '🔐',
-    title: 'Sécurité',
-    description: 'Authentification sécurisée, gestion des rôles, protection des données RGPD.',
-    technologies: ['JWT', 'RBAC', 'HTTPS', 'RGPD']
+    icon: '🔧',
+    title: 'Maintenance & Support',
+    description: 'Maintenance technique, mises à jour de sécurité et support continu pour votre site web.',
+    features: ['Mises à jour', 'Corrections bugs', 'Support technique', 'Sauvegardes']
   },
   {
-    icon: '📊',
-    title: 'Base de données',
-    description: 'Conception et optimisation de bases de données relationnelles performantes.',
-    technologies: ['MySQL', 'Doctrine ORM', 'Migrations', 'Optimisation']
+    icon: '📱',
+    title: 'Site Responsive',
+    description: 'Sites web parfaitement adaptés à tous les écrans : ordinateur, tablette et smartphone.',
+    features: ['Mobile-first', 'Tablette', 'Desktop', 'Performance']
   }
-];
----
+];---
 
 <section id="services" class="py-16 md:py-24 bg-white">
   <div class="container mx-auto px-4">
@@ -61,7 +60,7 @@ const services = [
             {service.description}
           </p>
           <div class="flex flex-wrap gap-2">
-            {service.technologies.map((tech) => (
+            {service.features.map((tech) => (
               <span class="text-xs px-3 py-1 bg-primary-100 text-primary-700 rounded-full font-medium">
                 {tech}
               </span>
