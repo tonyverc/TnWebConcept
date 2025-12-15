@@ -2,20 +2,25 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-900 text-gray-300 py-12">
+<footer class="bg-gray-900 text-gray-300 py-16">
   <div class="container mx-auto px-4">
-    <div class="grid md:grid-cols-4 gap-8 mb-8">
-      <div class="md:col-span-2">
-        <img src="/logo-blanc-sans-fond.png" alt="Logo TN Web Concept" class="h-16 mb-4" />
-        <p class="text-gray-400 mb-4">
-          Développeur Full-Stack spécialisé Angular & Symfony. Création d'applications web modernes et performantes.
+    <div class="grid md:grid-cols-4 gap-12 mb-12">
+      <!-- Colonne Logo & Description -->
+      <div class="md:col-span-2 space-y-6">
+        <img 
+          src="/logo-blanc-sans-fond.png" 
+          alt="TN Web Concept" 
+          class="h-20 w-auto"
+        />
+        <p class="text-gray-400 leading-relaxed max-w-md">
+          Solutions web sur mesure et accompagnement personnalisé pour concrétiser vos projets digitaux avec expertise et professionnalisme.
         </p>
-        <div class="flex gap-4">
+        <div class="flex gap-3">
           <a 
             href="https://github.com/tonyverc" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
+            class="w-11 h-11 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-all hover:scale-110"
             aria-label="GitHub"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -26,7 +31,7 @@ const currentYear = new Date().getFullYear();
             href="https://linkedin.com/in/tonyvercruysse" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
+            class="w-11 h-11 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-all hover:scale-110"
             aria-label="LinkedIn"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -36,43 +41,93 @@ const currentYear = new Date().getFullYear();
         </div>
       </div>
 
+      <!-- Colonne Navigation -->
       <div>
-        <h4 class="text-white font-semibold mb-4">Navigation</h4>
-        <ul class="space-y-2">
-          <li><a href="#accueil" class="hover:text-primary-400 transition-colors">Accueil</a></li>
-          <li><a href="#services" class="hover:text-primary-400 transition-colors">Services</a></li>
-          <li><a href="#portfolio" class="hover:text-primary-400 transition-colors">Portfolio</a></li>
-          <li><a href="#competences" class="hover:text-primary-400 transition-colors">Compétences</a></li>
-          <li><a href="#apropos" class="hover:text-primary-400 transition-colors">À propos</a></li>
-          <li><a href="#contact" class="hover:text-primary-400 transition-colors">Contact</a></li>
+        <h4 class="text-white font-bold text-lg mb-6">Navigation</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="/#accueil" class="text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center group">
+              <span class="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all mr-0 group-hover:mr-2"></span>
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="/#services" class="text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center group">
+              <span class="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all mr-0 group-hover:mr-2"></span>
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="/#portfolio" class="text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center group">
+              <span class="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all mr-0 group-hover:mr-2"></span>
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a href="/#competences" class="text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center group">
+              <span class="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all mr-0 group-hover:mr-2"></span>
+              Compétences
+            </a>
+          </li>
+          <li>
+            <a href="/#apropos" class="text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center group">
+              <span class="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all mr-0 group-hover:mr-2"></span>
+              À propos
+            </a>
+          </li>
+          <li>
+            <a href="/#contact" class="text-gray-400 hover:text-primary-400 transition-colors inline-flex items-center group">
+              <span class="w-0 group-hover:w-2 h-0.5 bg-primary-400 transition-all mr-0 group-hover:mr-2"></span>
+              Contact
+            </a>
+          </li>
         </ul>
       </div>
 
+      <!-- Colonne Contact -->
       <div>
-        <h4 class="text-white font-semibold mb-4">Contact</h4>
-        <ul class="space-y-2">
-          <li>
-            <a href="mailto:contact@tn-web-concept.fr" class="hover:text-primary-400 transition-colors">
+        <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            <a href="mailto:contact@tnwebconcept.fr" class="text-gray-400 hover:text-primary-400 transition-colors break-all">
               contact@tnwebconcept.fr
             </a>
           </li>
-          <li class="text-gray-400">Leforest, France</li>
-          <li class="text-gray-400">TJM : 280-300€</li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-400">Hauts-de-France</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-gray-400">TJM : 250-300€</span>
+          </li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-gray-400 text-sm">
-        © {currentYear} TN Web Concept. Tous droits réservés.
-      </p>
-      <div class="flex gap-6 mt-4 md:mt-0">
-        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">
-          Mentions légales
-        </a>
-        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">
-          Politique de confidentialité
-        </a>
+    <!-- Ligne de séparation et mentions légales -->
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-400 text-sm">
+          © {currentYear} <span class="text-white font-medium">TN Web Concept</span> - Tous droits réservés
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="/mentions-legales" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+            Mentions légales
+          </a>
+          <a href="/politique" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+            Politique de confidentialité
+          </a>
+        </div>
       </div>
     </div>
   </div>

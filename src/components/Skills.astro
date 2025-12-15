@@ -2,36 +2,23 @@
 const skillCategories = [
   {
     category: 'Frontend',
-    color: 'primary',
-    skills: [
-      { name: 'Angular ', level: 90 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'HTML/CSS', level: 95 },
-      { name: 'Tailwind CSS', level: 90 },
-      { name: 'RxJS', level: 80 }
-    ]
+    icon: '🎨',
+    skills: ['Angular', 'React', 'TypeScript', 'HTML/CSS', 'Tailwind CSS', 'JavaScript']
   },
   {
     category: 'Backend',
-    color: 'accent',
-    skills: [
-      { name: 'Symfony ', level: 85 },
-      { name: 'PHP ', level: 85 },
-      { name: 'API REST', level: 90 },
-      { name: 'MySQL', level: 80 },
-      { name: 'Doctrine ORM', level: 80 }
-    ]
+    icon: '⚙️',
+    skills: ['Symfony', 'PHP', 'Node.js', 'API REST', 'MySQL', 'PostgreSQL', 'SQL', 'PhpMyAdmin']
   },
   {
-    category: 'Outils & DevOps',
-    color: 'primary',
-    skills: [
-      { name: 'Docker', level: 75 },
-      { name: 'Git / GitHub', level: 90 },
-      { name: 'Linux', level: 80 },
-      { name: 'VS Code', level: 95 },
-      { name: 'Postman', level: 85 }
-    ]
+    category: 'DevOps & Outils',
+    icon: '🚀',
+    skills: ['Docker', 'Git', 'Linux', 'CI/CD', 'Postman', 'Nginx']
+  },
+  {
+    category: 'Design & Gestion',
+    icon: '📋',
+    skills: ['Figma', 'Trello', 'Agile/Scrum', 'UML', 'Responsive Design', 'UI/UX']
   }
 ];
 ---
@@ -43,30 +30,22 @@ const skillCategories = [
         Compétences
       </h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Stack technique moderne et maîtrise des outils du développement web
+        Une expertise complète pour concrétiser vos projets web
       </p>
     </div>
 
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {skillCategories.map((category) => (
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-primary-500 hover:shadow-lg transition-all duration-300">
+          <div class="text-4xl mb-4 text-center">{category.icon}</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
             {category.category}
           </h3>
-          <div class="space-y-4">
+          <div class="flex flex-wrap gap-2 justify-center">
             {category.skills.map((skill) => (
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="font-medium text-gray-700">{skill.name}</span>
-                  <span class="text-sm text-gray-500">{skill.level}%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    class={`h-2 rounded-full bg-${category.color}-600`}
-                    style={`width: ${skill.level}%`}
-                  ></div>
-                </div>
-              </div>
+              <span class="px-3 py-1.5 bg-white text-gray-700 rounded-full text-sm border border-gray-200 hover:border-primary-500 hover:text-primary-600 transition-colors">
+                {skill}
+              </span>
             ))}
           </div>
         </div>
@@ -74,24 +53,26 @@ const skillCategories = [
     </div>
 
     <div class="mt-16 max-w-4xl mx-auto">
-      <div class="bg-gradient-to-r from-secondary-700 to-secondary-500 rounded-xl p-8 text-white text-center">
-        <h3 class="text-2xl font-bold mb-4">Certification Professionnelle</h3>
-        <p class="text-lg mb-2">
+      <div class="bg-gradient-to-r from bg-secondary-500 to-secondary-700 rounded-xl p-8 text-black text-center shadow-xl">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <h3 class="text-2xl font-bold">Certification Professionnelle</h3>
+        </div>
+        <p class="text-lg font-semibold mb-2">
           Concepteur Développeur d'Applications (CDA)
         </p>
-        <p class="text-white">
-          Titre RNCP Niveau 6 (Bac+3/4) - SOFIP
+        <p class="text-black/90">
+          Titre RNCP Niveau 6 (Bac+3/4) - Certifié 2024
         </p>
       </div>
     </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        Technologies modernes, bonnes pratiques et veille technologique constante pour des solutions web performantes et pérennes.
+      </p>
+    </div>
   </div>
 </section>
-
-<style>
-  .bg-primary-600 {
-    background-color: #2563eb;
-  }
-  .bg-accent-600 {
-    background-color: #059669;
-  }
-</style>
