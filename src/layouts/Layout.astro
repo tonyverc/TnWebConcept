@@ -1,4 +1,6 @@
 ---
+import 'aos/dist/aos.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -24,6 +26,15 @@ const { title, description = "TN Web Concept - Développeur Full-Stack Angular &
   </head>
   <body class="bg-gray-50 text-gray-900">
     <slot />
+
+    <script>
+      import AOS from 'aos';
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    </script>
   </body>
 </html>
 
