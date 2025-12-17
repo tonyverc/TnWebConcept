@@ -1,0 +1,196 @@
+---
+import ProjetLayout from '../../layouts/ProjetLayout.astro';
+---
+
+<ProjetLayout 
+  title="France Marine Services"
+  description="Application web complète avec catalogue produits public et interface d'administration sécurisée"
+>
+  <!-- Hero -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-primary-500 to-accent-500">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          France Marine Services
+        </h1>
+        <p class="text-xl md:text-2xl opacity-90 mb-8">
+          Application web complète avec catalogue produits public et interface d'administration sécurisée
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">Angular 18</span>
+          <span class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">Symfony 7</span>
+          <span class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">MySQL</span>
+          <span class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">Docker</span>
+          <span class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">JWT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contexte du projet -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Contexte du projet</h2>
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Projet réalisé dans le cadre de mon alternance chez France Marine Services, une entreprise spécialisée dans la vente d'équipements marins. L'objectif était de créer une application web moderne permettant de présenter le catalogue produits et de faciliter la gestion interne.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Le projet a été développé en 4 mois, de la conception à la mise en production, en suivant une méthodologie agile avec des sprints de 2 semaines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fonctionnalités principales -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Fonctionnalités principales</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path>
+                <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path>
+                <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Catalogue produits</h3>
+            <p class="text-gray-600">
+              Interface publique avec système de filtres avancés (catégories, prix, disponibilité) et recherche en temps réel.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Administration sécurisée</h3>
+            <p class="text-gray-600">
+              Interface admin complète avec EasyAdmin pour gérer produits, catégories, et utilisateurs avec authentification JWT.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">API RESTful</h3>
+            <p class="text-gray-600">
+              14 endpoints sécurisés pour la communication entre le frontend Angular et le backend Symfony.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Design responsive</h3>
+            <p class="text-gray-600">
+              Interface moderne et adaptative développée avec Tailwind CSS, optimisée pour tous les appareils.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack technique -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Stack technique</h2>
+        
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Frontend</h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-medium">Angular 18</span>
+              <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-medium">TypeScript</span>
+              <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-medium">Tailwind CSS</span>
+              <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-lg font-medium">RxJS</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Backend</h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-accent-100 text-accent-700 rounded-lg font-medium">Symfony 7</span>
+              <span class="px-4 py-2 bg-accent-100 text-accent-700 rounded-lg font-medium">PHP 8.2</span>
+              <span class="px-4 py-2 bg-accent-100 text-accent-700 rounded-lg font-medium">MySQL</span>
+              <span class="px-4 py-2 bg-accent-100 text-accent-700 rounded-lg font-medium">JWT</span>
+              <span class="px-4 py-2 bg-accent-100 text-accent-700 rounded-lg font-medium">EasyAdmin</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">DevOps</h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-secondary-100 text-secondary-700 rounded-lg font-medium">Docker</span>
+              <span class="px-4 py-2 bg-secondary-100 text-secondary-700 rounded-lg font-medium">Git</span>
+              <span class="px-4 py-2 bg-secondary-100 text-secondary-700 rounded-lg font-medium">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Résultats -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Résultats</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-4xl font-bold text-primary-600 mb-2">14</div>
+            <div class="text-gray-700">Endpoints API</div>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-4xl font-bold text-primary-600 mb-2">100%</div>
+            <div class="text-gray-700">Responsive</div>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-4xl font-bold text-primary-600 mb-2">4</div>
+            <div class="text-gray-700">Mois de dev</div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Points clés</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Architecture découplée avec API REST pour faciliter les évolutions futures</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Sécurité renforcée avec authentification JWT et protection CORS</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Conteneurisation Docker pour un déploiement simple et reproductible</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProjetLayout>

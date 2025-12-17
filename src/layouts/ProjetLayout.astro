@@ -1,0 +1,45 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={`${title} - TN Web Concept`} description={description}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+      <div class="container mx-auto px-4 py-4">
+        <nav class="flex items-center gap-2 text-sm text-gray-600">
+          <a href="/" class="hover:text-primary-600 transition-colors">Accueil</a>
+          <span>/</span>
+          <a href="/#portfolio" class="hover:text-primary-600 transition-colors">Portfolio</a>
+          <span>/</span>
+          <span class="text-gray-900 font-medium">{title}</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Contenu du projet -->
+    <slot />
+
+    <!-- CTA Retour -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <a 
+          href="/#portfolio" 
+          class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+        >
+          <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Retour au portfolio
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>
