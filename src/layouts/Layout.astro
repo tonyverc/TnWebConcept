@@ -1,5 +1,7 @@
 ---
 import 'aos/dist/aos.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -26,8 +28,14 @@ const { title, description = "TN Web Concept - Développeur Full-Stack Angular &
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   </head>
+
+  
   <body class="bg-gray-50 text-gray-900">
+    <Header />
+
     <slot />
+
+    <Footer />
 
     <script>
       import AOS from 'aos';
@@ -38,6 +46,7 @@ const { title, description = "TN Web Concept - Développeur Full-Stack Angular &
       });
     </script>
   </body>
+  
 </html>
 
 
@@ -54,6 +63,7 @@ const { title, description = "TN Web Concept - Développeur Full-Stack Angular &
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
+    padding-top: 80px;
   }
 
   h1, h2, h3, h4, h5, h6 {
