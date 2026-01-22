@@ -30,7 +30,7 @@ const projects = [
 ];
 ---
 
-<section id="portfolio" class="py-16 md:py-24 bg-gray-50">
+<section id="portfolio" class="relative z-10 py-16 md:py-24 bg-gray-50">
   <div class="container mx-auto px-4">
     <div 
       class="text-center mb-16"
@@ -64,6 +64,9 @@ const projects = [
               src={project.image} 
               alt={project.title} 
               class="h-full  object-cover"
+              loading="lazy"
+              width="200"
+              height="200"
             />
           </div>
           

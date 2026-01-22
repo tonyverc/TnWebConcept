@@ -1,14 +1,17 @@
 ---
-import 'aos/dist/aos.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import "aos/dist/aos.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = "TN Web Concept - Développeur Full-Stack Angular & Symfony" } = Astro.props;
+const {
+  title,
+  description = "TN Web Concept - Développeur Full-Stack Angular & Symfony",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,20 +19,24 @@ const { title, description = "TN Web Concept - Développeur Full-Stack Angular &
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
-  
   <body class="bg-gray-50 text-gray-900">
     <Header />
 
@@ -38,19 +45,36 @@ const { title, description = "TN Web Concept - Développeur Full-Stack Angular &
     <Footer />
 
     <script>
-      import AOS from 'aos';
-      AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-      });
+      import AOS from "aos";
+
+      // Init simple et robuste
+      const initAOS = () => {
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
+          offset: 50,
+          delay: 0,
+        });
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initAOS);
+      } else {
+        initAOS();
+      }
     </script>
   </body>
-  
 </html>
 
-
 <style is:global>
+  /*Fix pour mobile*/
+  @supports (-webkit-touch-callout: none) {
+    body {
+      min-height: -webkit-fill-available;
+    }
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -62,11 +86,16 @@ const { title, description = "TN Web Concept - Développeur Full-Stack Angular &
   }
 
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     padding-top: 80px;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', system-ui, sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", system-ui, sans-serif;
   }
 </style>
